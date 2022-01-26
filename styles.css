@@ -1,0 +1,93 @@
+
+body{
+    margin:0; 
+    text-align: center;/* this centers all the elements inside it that do not have a width set.
+    For elements for which we set a width , we have to center align it using auto in margin */
+    font-family: 'Merriweather', serif;
+                }
+
+h1{
+   
+    font-family: 'Sacramento', cursive;
+     /* 100% = 16 px */
+                     /* 1 em = 16 px but the difference is it is a dynamic size. So if the user changes the zoom settings, it will get adjusted automatically */
+
+    /* One major difference between em/percentage and px is that if we give a font-size to 
+    the parent element in terms of em/percentage (for h1, parent is the body), Then we 
+    also specify a font - size in the element (here h1) then both of them get added up.
+    This is not the case with px. */
+
+    /* To avoid this confusion we use rem. This ignores all of the parent settings */
+    font-size: 10 rem;
+    margin: 50px auto 0 auto;
+    color: #66BFBF;
+    line-height: 2 ;  /* specifies the height of a line , the space between two lines*/ 
+                      /* It basically increaed the distance between h1 and h2 */ 
+
+
+                    }
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1 rem;
+    color: #66BFBF;
+    font-weight:  normal;
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    color: #11999E;
+}
+.top-section{
+    background-color: #FFE3E3;
+    text-align: center;
+    /* here we give re position as relative so that the top & bottom cloud (for which
+        this top-section is the parent) can be positioned relative to it. */
+    position:relative;
+    padding-top: 100px;
+}
+
+/* Positioning in CSS
+1. Relative : Positions element relative to the position where the element was supposed to be 
+2. Absolute : Positions element relative to it's immediate parent element
+3. Fixed: The element is not removed from it's position even on scrolling. Useful for navbars.
+*/
+
+.bottom-cloud{
+    position: absolute;
+    /* Here we are giving right and top margins wrt to parent element i.e. the top-section */ 
+    right:300px;
+    top:50px;
+}
+a{
+    color: #11999E;
+}
+.top-cloud{
+    position: absolute;
+   left:300px;
+   bottom:300px;
+}
+
+.skill-row{
+    width:50%;
+    margin: 100px auto 100px auto;
+    text-align: left;
+    line-height:2;
+}
+
+.img{
+    width: 25%;
+    float : left; /* Due the float property, the text wraps aroound the images. Here
+                     the image is on the left and the text  is displayed on its right
+                     woth a margin of 30px. */
+
+    margin-right: 30px;
+}
+
+.skill-desc{
+    clear: left; /* This prevents the text to be wrapped around from left side */
+}
+
+.middle-container{
+    margin-top: 100px;
+}
